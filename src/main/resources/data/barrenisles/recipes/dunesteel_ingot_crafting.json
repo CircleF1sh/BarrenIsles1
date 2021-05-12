@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    },
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    },
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    },
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    },
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    },
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    },
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    },
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    },
+    {
+      "item": "barrenisles:dunesteel_nugget"
+    }
+  ],
+  "result": {
+    "item": "barrenisles:dunesteel_ingot",
+    "count": 1
+  }
+}

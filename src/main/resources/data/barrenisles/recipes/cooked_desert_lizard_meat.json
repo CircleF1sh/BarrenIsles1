@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "barrenisles:raw_desert_lizard_meat"
+  },
+  "result": "barrenisles:cooked_desert_lizard_meat",
+  "experience": 1,
+  "cookingtime": 220
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "barrenisles:scorchstone"
+  },
+  "result": "barrenisles:scorchstone_bricks",
+  "count": 1
+}

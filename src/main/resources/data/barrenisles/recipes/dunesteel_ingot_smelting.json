@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "barrenisles:raw_dunesteel"
+  },
+  "result": "barrenisles:dunesteel_ingot",
+  "experience": 1.5,
+  "cookingtime": 260
+}

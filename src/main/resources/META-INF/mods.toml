@@ -1,0 +1,20 @@
+#Anything that is optional which you are not using, just delete that line. You can also delete any of the '#comments'
+
+modLoader="javafml" #mandatory
+loaderVersion="[35,)" #mandatory
+license="All rights reserved" #mandatory https://choosealicense.com/
+issueTrackerURL="http://my.issue.tracker/" #optional
+
+[[mods]] #mandatory
+modId="barrenisles" #mandatory
+version="(Very) Alpha 1.16.5-1.0.0" #mandatory
+displayName="Barren Isles" #mandatory
+updateJSONURL="http://myurl.me/" #optional
+displayURL="http://example.com/" #optional
+logoFile="examplemod.png" #optional
+credits="Credits go to my amazing team and community who helped with making this mod possible." #optional
+authors="CircleF1sh (Founder), KermitTheFriggie, Forest Spirit, OmayPaty, SawDinoDude,
+PrehistoryIsCool, and ____________ (yes thats their actual name)." #optional
+description='''
+The Barren Isles adds new content related to the deserts (dont worry it fits with vanilla minecraft) by adding a new dimension that has its own lore, creatures, tools and armor, and so much more! Fight your way through the deadly foes and events of barren isles and dominate the realm!
+'''

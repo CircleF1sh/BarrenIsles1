@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#B#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:green_dye"
+    },
+    "B": {
+      "item": "barrenisles:scorchstone"
+    }
+  },
+  "result": {
+    "item": "barenisles:green_scorchstone",
+    "count": 1
+  }
+}
