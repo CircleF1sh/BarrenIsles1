@@ -1,0 +1,14 @@
+{
+  "config": {
+    "top_material": {
+      "Name": "barrenisles:scorchsand"
+    },
+    "under_material": {
+      "Name": "barrenisles:scorchstone"
+    },
+    "underwater_material": {
+      "Name": "barrenisles:scorchstone"
+    }
+  },
+  "type": "minecraft:desert"
+}
