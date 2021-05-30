@@ -1,18 +1,21 @@
 package com.circle.barrenisles;
 
 import com.circle.barrenisles.entities.desert_lizard.DesertLizardEntity;
-import com.circle.barrenisles.registries.BlockRegistry;
-import com.circle.barrenisles.registries.ItemRegistry;
-import com.circle.barrenisles.registries.ModEntityType;
+import com.circle.barrenisles.registries.BarrenBlockRegistry;
+import com.circle.barrenisles.registries.BarrenItemRegistry;
+import com.circle.barrenisles.registries.BarrenEntityType;
+import com.circle.barrenisles.registries.BarrenSurfaceBuilders;
+import com.circle.barrenisles.world.gen.BarrenOreGeneration;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.antlr.v4.runtime.misc.MurmurHash;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,15 +30,18 @@ public class BarrenIsles
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
                 bus.addListener(this::setup);
 
-        ItemRegistry.ITEMS.register(bus);
-        BlockRegistry.BLOCKS.register(bus);
-        ModEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        BarrenItemRegistry.ITEMS.register(bus);
+        BarrenBlockRegistry.BLOCKS.register(bus);
+        BarrenEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        BarrenSurfaceBuilders.SURFACE_BUILDERS.register(bus);
+
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BarrenOreGeneration::generateOres);
     }
     private void setup(final FMLCommonSetupEvent event) {
 
         DeferredWorkQueue.runLater(() -> {
-            GlobalEntityTypeAttributes.put(ModEntityType.DESERT_LIZARD.get(), DesertLizardEntity.setCustomAttributes().create());
-            GlobalEntityTypeAttributes.put(ModEntityType.TOXIC_GILA.get(), DesertLizardEntity.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(BarrenEntityType.DESERT_LIZARD.get(), DesertLizardEntity.setCustomAttributes().create());
+            GlobalEntityTypeAttributes.put(BarrenEntityType.TOXIC_GILA.get(), DesertLizardEntity.setCustomAttributes().create());
         });
     }
 
@@ -47,7 +53,7 @@ public class BarrenIsles
 
         @Override
         public ItemStack createIcon() {
-            return ItemRegistry.DUNERAPTOR_CLAW.get().getDefaultInstance();
+            return BarrenItemRegistry.DUNERAPTOR_CLAW.get().getDefaultInstance();
         }
     }
 }

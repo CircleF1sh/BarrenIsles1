@@ -1,6 +1,6 @@
 package com.circle.barrenisles.items.tools;
 
-import com.circle.barrenisles.registries.ItemRegistry;
+import com.circle.barrenisles.registries.BarrenItemRegistry;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
@@ -9,7 +9,7 @@ import java.util.function.Supplier;
 public enum BarrenItemTier implements IItemTier {
 
     DUNESTEEL(2, 450, 7.0F, 3.0F, 12, () -> {
-        return Ingredient.fromItems(ItemRegistry.DUNESTEEL_INGOT.get());
+        return Ingredient.fromItems(BarrenItemRegistry.DUNESTEEL_INGOT.get());
     }, 0);
 
     private final int harvestLevel;

@@ -1,6 +1,6 @@
 package com.circle.barrenisles.entities.desert_lizard;
 
-import com.circle.barrenisles.registries.ModEntityType;
+import com.circle.barrenisles.registries.BarrenEntityType;
 import net.minecraft.entity.AgeableEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
@@ -39,6 +39,6 @@ public class DesertLizardEntity extends AnimalEntity {
     @Nullable
     @Override
     public AgeableEntity func_241840_a(ServerWorld p_241840_1_, AgeableEntity p_241840_2_) {
-        return ModEntityType.DESERT_LIZARD.get().create(this.world);
+        return BarrenEntityType.DESERT_LIZARD.get().create(this.world);
     }
 }
