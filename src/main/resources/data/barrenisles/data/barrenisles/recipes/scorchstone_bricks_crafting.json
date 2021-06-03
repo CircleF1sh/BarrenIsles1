@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "ingredients": [
+    {
+      "item": "barrenisles:scorchstone"
+    },
+    {
+      "item": "barrenisles:scorchstone"
+    },
+    {
+      "item": "barrenisles:scorchstone"
+    },
+    {
+      "item": "barrenisles:scorchstone"
+    }
+  ],
+  "result": {
+    "item": "barrenisles:scorchstone_bricks",
+    "count": 4
+  }
+}

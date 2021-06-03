@@ -1,0 +1,21 @@
+{
+  "surface_builder": "barrenisles:umbral_surface_builder",
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": 2,
+  "downfall": 0,
+  "precipitation": "none",
+  "category": "desert",
+  "player_spawn_friendly": false,
+  "effects": {
+    "sky_color": 6176861,
+    "fog_color": 12230842,
+    "water_color": 8417145,
+    "water_fog_color": 8877450
+  },
+  "starts": [],
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {},
+  "features": []
+}

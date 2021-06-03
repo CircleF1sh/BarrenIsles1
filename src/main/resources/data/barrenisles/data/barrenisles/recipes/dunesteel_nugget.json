@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "barrenisles:dunesteel_ingot"
+    }
+  ],
+  "result": {
+    "item": "barrenisles:dunesteel_nugget",
+    "count": 9
+  }
+}

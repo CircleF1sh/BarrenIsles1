@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "barenisles:green_scorchstone"
+  },
+  "result": "barrenisles:polished_green_scorchstone",
+  "experience": 0.5,
+  "cookingtime": 240
+}

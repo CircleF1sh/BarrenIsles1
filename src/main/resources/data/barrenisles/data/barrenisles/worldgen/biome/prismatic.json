@@ -1,0 +1,25 @@
+{
+  "surface_builder": "barrenisles:prismatic_surface_builder",
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": -0.4,
+  "downfall": 0.4,
+  "precipitation": "none",
+  "category": "desert",
+  "player_spawn_friendly": false,
+  "effects": {
+    "sky_color": 14277598,
+    "fog_color": 12569049,
+    "water_color": 16119802,
+    "water_fog_color": 12961235
+  },
+  "starts": [],
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave"
+    ]
+  },
+  "features": []
+}

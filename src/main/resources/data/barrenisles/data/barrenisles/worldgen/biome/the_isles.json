@@ -1,0 +1,21 @@
+{
+  "surface_builder": "barrenisles:the_isles_surface_builder",
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": 2,
+  "downfall": 0,
+  "precipitation": "none",
+  "category": "desert",
+  "player_spawn_friendly": false,
+  "effects": {
+    "sky_color": 9730636,
+    "fog_color": 9203259,
+    "water_color": 8418415,
+    "water_fog_color": 9076341
+  },
+  "starts": [],
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {},
+  "features": []
+}

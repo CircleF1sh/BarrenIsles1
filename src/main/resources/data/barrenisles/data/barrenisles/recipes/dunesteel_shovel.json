@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "b",
+    "/",
+    "/"
+  ],
+  "key": {
+    "b": {
+      "item": "barrenisles:dunesteel_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "barrenisles:dunesteel_shovel",
+    "count": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#B#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:blue_dye"
+    },
+    "B": {
+      "item": "barrenisles:scorchstone"
+    }
+  },
+  "result": {
+    "item": "barrenisles:blue_scorchstone",
+    "count": 1
+  }
+}

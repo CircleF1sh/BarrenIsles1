@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "barrenisles:purple_scorchstone"
+  },
+  "result": "barrenisles:polished_purple_scorchstone",
+  "experience": 0.5,
+  "cookingtime": 240
+}
