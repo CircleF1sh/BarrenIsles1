@@ -1,16 +1,16 @@
 package com.circle.barrenisles.world.biomes;
-import com.circle.barrenisles.registries.BlockRegistry;
-import net.minecraft.client.world.DimensionRenderInfo;
-import net.minecraft.data.BiomeProvider;
+
+import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.DimensionType;
-import net.minecraft.world.biome.*;
-import net.minecraft.world.biome.provider.OverworldBiomeProvider;
-import net.minecraft.world.gen.layer.BiomeLayer;
-import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeAmbience;
+import net.minecraft.world.biome.BiomeGenerationSettings;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.gen.surfacebuilders.ISurfaceBuilderConfig;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 
 public class BiomeHelper {
     @SuppressWarnings("unused")
@@ -51,6 +51,9 @@ public class BiomeHelper {
     /**
      * Shortcut function and enforces surface builder
      */
+    public static <C extends ISurfaceBuilderConfig> BiomeGenerationSettings.Builder genSettings(SurfaceBuilder<C> surfaceBuilder, C config) {
+        return new BiomeGenerationSettings.Builder().withSurfaceBuilder(surfaceBuilder.func_242929_a(config));
+    }
 
     /**
      * Shortcut function
@@ -81,11 +84,12 @@ public class BiomeHelper {
                                                 int grassColor,
                                                 int foliageColor,
                                                 float temperature,
-                                                int skyFogColor,
-                                                SoundEvent music) {
+                                                int skyFogColor) {
         return new BiomeAmbience.Builder()
                 .setWaterColor(waterColor)
                 .setWaterFogColor(waterFogColor)
+                .withGrassColor(grassColor)
+                .withFoliageColor(foliageColor)
                 .withSkyColor(getSkyForTemp(temperature))
                 .setFogColor(skyFogColor);
     }

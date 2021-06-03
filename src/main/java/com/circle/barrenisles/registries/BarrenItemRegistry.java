@@ -159,5 +159,4 @@ public class BarrenItemRegistry {
 
     public static final RegistryObject<BlockItem> UMBRAL_SCORCHSAND = ITEMS.register("umbral_scorchsand",
             () -> new BlockItem(BarrenBlockRegistry.UMBRAL_SCORCHSAND.get(), new Item.Properties().group(BarrenIsles.BARREN_GROUP)));
-
 }

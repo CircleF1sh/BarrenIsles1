@@ -1,14 +1,12 @@
 package com.circle.barrenisles;
 
 import com.circle.barrenisles.entities.desert_lizard.DesertLizardEntity;
-import com.circle.barrenisles.registries.BarrenBlockRegistry;
-import com.circle.barrenisles.registries.BarrenItemRegistry;
-import com.circle.barrenisles.registries.BarrenEntityType;
-import com.circle.barrenisles.registries.BarrenSurfaceBuilders;
+import com.circle.barrenisles.registries.*;
 import com.circle.barrenisles.world.gen.BarrenOreGeneration;
 import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,11 +27,12 @@ public class BarrenIsles
     public BarrenIsles() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
                 bus.addListener(this::setup);
+                bus.addListener(EventPriority.HIGH, BarrenBiomeRegistry::biomeLoading);
 
         BarrenItemRegistry.ITEMS.register(bus);
         BarrenBlockRegistry.BLOCKS.register(bus);
         BarrenEntityType.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        BarrenSurfaceBuilders.SURFACE_BUILDERS.register(bus);
+        BarrenBiomeRegistry.BIOMES.register(bus);
 
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BarrenOreGeneration::generateOres);
     }
@@ -55,5 +54,12 @@ public class BarrenIsles
         public ItemStack createIcon() {
             return BarrenItemRegistry.DUNERAPTOR_CLAW.get().getDefaultInstance();
         }
+    }
+
+
+
+
+    public static ResourceLocation id(String path) {
+        return new ResourceLocation(MOD_ID, path);
     }
 }
